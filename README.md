@@ -26,6 +26,7 @@ A modern AI-powered chatbot that lets you chat with your PDF documents. Upload a
 
 ### Backend
 - FastAPI (Python)
+- **Groq API** for LLM inference
 - MongoDB for vector storage
 - Sentence Transformers for embeddings
 - PyPDF for PDF text extraction
@@ -36,6 +37,7 @@ A modern AI-powered chatbot that lets you chat with your PDF documents. Upload a
 - Node.js 18+
 - Python 3.9+
 - MongoDB running locally or connection string
+- **Groq API Key** ([Get one here](https://console.groq.com/keys))
 
 ### Backend Setup
 
@@ -51,7 +53,7 @@ venv\Scripts\activate  # Windows
 pip install -r requirements.txt
 
 # Create .env file with your API key
-echo "OPENROUTER_API_KEY=your_key_here" > .env
+echo "GROQ_API_KEY=your_key_here" > .env
 
 # Run the server
 uvicorn app.main:app --reload
