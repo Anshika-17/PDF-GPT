@@ -1,6 +1,12 @@
+import os
 from pymongo import MongoClient
+from dotenv import load_dotenv
 
-client = MongoClient("mongodb://localhost:27017")
+load_dotenv()
+
+MONGODB_URI = os.getenv("MONGODB_URI", "mongodb://localhost:27017")
+
+client = MongoClient(MONGODB_URI)
 
 db = client["pdf_ai_chatbot"]
 chunks_collection = db["chunks"]

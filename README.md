@@ -52,8 +52,10 @@ venv\Scripts\activate  # Windows
 # Install dependencies
 pip install -r requirements.txt
 
-# Create .env file with your API key
-echo "GROQ_API_KEY=your_key_here" > .env
+# Create .env file with your credentials
+# Add your Groq API key and MongoDB URI
+echo "GROQ_API_KEY=your_groq_key_here" > .env
+echo "MONGODB_URI=your_mongodb_connection_string" >> .env
 
 # Run the server
 uvicorn app.main:app --reload
